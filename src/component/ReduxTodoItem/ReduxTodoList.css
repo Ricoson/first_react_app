@@ -1,0 +1,50 @@
+ .show{
+    opacity: 1;
+    color:red; 
+    font-size:25px;
+    transition:all 1s ease-in;
+ }
+ .hide{
+     /* 这里在animation后面添加forwards这个值是保留动画最后一帧 */
+    animation: hide-item 2s ease-in forwards;
+    font-size:25px;
+
+ }
+ @keyframes hide-item{
+     0% {
+        opacity: 1;
+        color:bisque;
+     }
+     50%{
+         opacity: 0.5;
+         color:green;
+     }
+     100%{
+         opacity: 0;
+         color: blue;
+     }
+ }
+
+ /* 入场动画执行 */
+ .my-node-enter {
+    opacity: 0;
+  }
+  .my-node-enter-active {
+    opacity: 1;
+    transition: opacity 1s ease-in; 
+  }
+  .my-node-enter-done{
+    opacity: 1;
+  }
+
+  /* 出场动画 */
+  .my-node-exit {
+    opacity: 1;
+  }
+  .my-node-exit-active {
+    opacity: 0;
+    transition: opacity 1s ease-in; 
+  }
+  .fade-exit-done{
+      opacity: 0;
+  }
