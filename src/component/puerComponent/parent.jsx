@@ -1,5 +1,5 @@
 // parent.js
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Child from './child';
 
 class Parent extends Component {
@@ -13,8 +13,10 @@ class Parent extends Component {
   }
 
   changeState() {
-    this.state.title = Math.random();
-    this.setState(this.state);
+    let title = Math.random();
+    this.setState({
+      title: title
+    });
   }
 
   render() {
